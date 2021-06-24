@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studi Kasus Membuat Aplikasi CRUD Sederhana</title>
+
+    <link rel="shortcut icon" href="iqbal.ico" type="image/x-icon" />
+    <link rel="icon" href="iqbal.ico" type="image/x-icon" />
+
+    <style>
+      body > table {
+        background-color: #f2f2f2;
+        width: 100%;
+        text-align: center;
+      }
+
+      body {
+        background-image: url(pattern.png);
+      }
+
+      table {
+        border-collapse: collapse;
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+        text-align: center;
+        width: 100%;
+      }
+      table.list {
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even),
+      table.list thead > tr {
+        background-color: #dddddd;
+      }
+
+      input[type='text'],
+      input[type='number'] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      input[type='submit'] {
+        width: 30%;
+        background-color: #f0ad4e;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      form div.form-action-buttons {
+        text-align: center;
+      }
+
+      a {
+        background-color: #f44336;
+        color: white;
+        padding: 5px 10px;
+        margin: auto auto;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      label.validation-error {
+        color: red;
+        margin-left: 5px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
+
+      footer{
+        margin-top: 80px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>PROGRAM CRUD SEDERHANA DENGAN HTML,CSS DAN JAVASCRIPT</h2>
+    <table>
+      <tr>
+        <td>
+          <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div>
+              <label>NPM</label><label class="validation-error hide" id="npmValidationError">Silahkan Isi Datanya Terlebih Dahulu..!</label>
+              <input type="text" name="npm" id="npm" />
+            </div>
+            <div>
+              <label>NAMA</label>
+              <input type="text" name="nama" id="nama" />
+            </div>
+            <div>
+              <label>ALAMAT</label>
+              <input type="text" name="alamat" id="alamat" />
+            </div>
+            <div>
+              <label>E-MAIL</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div class="form-action-buttons">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table class="list" id="employeeList">
+            <thead>
+              <tr>
+                <th>NPM</th>
+                <th>NAMA</th>
+                <th>ALAMAT</th>
+                <th>E-MAIL</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script src="fungsi.js"></script>
+
+    <footer>
+      <p>Created With by M. Iqbal Rivaldi</a></p>
+    </footer>
+  </body>
+</html>
